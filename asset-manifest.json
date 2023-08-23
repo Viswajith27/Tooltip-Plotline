@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Tooltip-Plotline/static/css/main.71715d1a.css",
+    "main.js": "/Tooltip-Plotline/static/js/main.850361d9.js",
+    "index.html": "/Tooltip-Plotline/index.html",
+    "main.71715d1a.css.map": "/Tooltip-Plotline/static/css/main.71715d1a.css.map",
+    "main.850361d9.js.map": "/Tooltip-Plotline/static/js/main.850361d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71715d1a.css",
+    "static/js/main.850361d9.js"
+  ]
+}
