@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+.left-side {
+  position: relative;
+  flex: 1;
+  background-color: #f0f0f0;
+  width: 50vh;
+  padding: 20px;
+  white-space: nowrap;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.right-side {
+  flex: 1;
+  margin: 0px;
+  background-color: #e0e0e0;
+  padding: 20px;
+  white-space: nowrap;
+}
+
+.phone {
+  width: 70%;
+  height: 90%;
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: black;
+  border: 4px solid #404040;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+
+.tooltip-arrow {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #333;
+}
+
+/* ... (existing CSS) */
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
   color: white;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1;
+  width: max-content;
 }
 
-.App-link {
-  color: #61dafb;
+.tooltip-arrow {
+  position: absolute;
+  bottom: -16px; /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: var(--tooltip-arrow-width, 8px) solid transparent;
+  border-right: var(--tooltip-arrow-width, 8px) solid transparent;
+  border-top: var(--tooltip-arrow-height, 8px) solid #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tooltip-container:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+
+
+.dropdown-container,
+.form-container {
+  margin: 20px 0; /* Add margin to separate sections */
+}
+
+/* Additional styling for labels and inputs */
+.form-container label,
+.form-container input {
+  display: block;
+  margin-bottom: 10px;
 }
